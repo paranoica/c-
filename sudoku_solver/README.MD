@@ -83,7 +83,10 @@ bool process_solve(std::vector<std::vector<int>>& data, int row = 0, int cell = 
 ```
 
 ## [EN] Explanation
-A simple implementation of solving any sudoku using the backtracking method.\
+A simple implementation of solving any sudoku using the backtracking method.
+> [!IMPORTANT]
+> Backtracking is an approach to problem solving in which a program tries different possible solutions and, if it finds that the current solution is wrong, "backtracks" (undoes the last action) and tries another path. This method is often used to solve problems involving combinatorics, such as Sudoku, where the goal is to find all possible combinations that meet certain rules.
+
 These screenshots show the sequence of events that will happen when this code is executed.
 
 <p float="left">
