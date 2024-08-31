@@ -5,7 +5,7 @@
 <p float="left">
   <img src="https://i.imgur.com/AmKqai1.png" width=20% height=20%>
   <img src="https://i.imgur.com/rnZH35L.png" width=30% height=30%>
-  <img src="https://i.imgur.com/NUrHVft.png" width=45% height=45%>
+  <img src="https://i.imgur.com/NUrHVft.png" width=35% height=35%>
 </p>
 
 
