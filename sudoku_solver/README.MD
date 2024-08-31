@@ -1,5 +1,5 @@
 ## [RU] Объяснение
-Простая реализация решение любого судоку с помощью метода `возврата к исходным данным (backtracking)`.
+Простая реализация решение любого судоку с помощью метода `возврата к исходным данным (backtracking)`
 > [!IMPORTANT]
 > Метод возврата к исходному значению (backtracking) — это подход к решению задач, который заключается в том, что программа пробует различные возможные решения и, если обнаруживает, что текущее решение неверно, "возвращается назад" (отменяет последнее действие) и пробует другой путь. Этот метод часто используется для решения задач, связанных с комбинаторикой, например, судоку, где необходимо найти все возможные комбинации, соответствующие определенным правилам.
 
@@ -54,7 +54,7 @@ bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, 
 * если мы достигли конца строки `row == 9`, значит решение найдено). Если же `cell == 9`, то переходим к следующей строке.
 * если клетка заполнена `data[row][cell] != 0`, то переходим к другой клетке.
 * если `can_continue` возвращает `true`, то вставляем найденное число в клетку и рекурсивно решаем дальше.
-* если вставленное число не приводит к решению, то возвращаем клетку в исходное состояние `data[row][cell] = 0`.
+* если вставленное число не приводит к решению, то возвращаем клетку в исходное состояние `data[row][cell] = 0`
 
 ```c++
 bool process_solve(std::vector<std::vector<int>>& data, int row = 0, int cell = 0) {
@@ -138,7 +138,7 @@ bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, 
 * if we have reached the end of the line `row == 9`, then the solution has been found). If `cell == 9`, then we move on to the next line.
 * if the cell is filled with `data[row][cell] != 0`, then we move on to another cell.
 * if `can_continue` returns `true`, then we insert the found number into the cell and continue solving recursively.
-* if the inserted number does not lead to a solution, then we return the cell to its original state `data[row][cell] = 0`.
+* if the inserted number does not lead to a solution, then we return the cell to its original state `data[row][cell] = 0`
 
 ```c++
 bool process_solve(std::vector<std::vector<int>>& data, int row = 0, int cell = 0) {
