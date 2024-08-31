@@ -34,7 +34,7 @@ const std::vector<std::vector<int>> backup_data = data;
 ```
 
 ## Функция проверки возможности продолжения
-`can_continue` -> функция проверяет возможность размещения числа в клетке `data[row][cell]`
+`can_continue` -> функция проверяет возможность размещения числа в `data[row][cell]`
 
 ```c++
 bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, int iteration) {
@@ -118,7 +118,7 @@ const std::vector<std::vector<int>> backup_data = data;
 ```
 
 ## Function to check whether it is possible to continue
-`can_continue` -> function checks whether it is possible to place a number in the cell `data[row][cell]`
+`can_continue` -> function checks whether it is possible to place a number in the `data[row][cell]`
 
 ```c++
 bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, int iteration) {
