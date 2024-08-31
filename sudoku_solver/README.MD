@@ -9,7 +9,7 @@
 </p>
 
 ## Определение данных для судоку
-[data] -> вектор, представляющий собой сетку судоку 9x9. Нули обозначают пустые клетки, которые нужно заполнить.
+`data` -> вектор, представляющий собой сетку судоку 9x9. Нули обозначают пустые клетки, которые нужно заполнить.
 
 ```c++
 std::vector<std::vector<int>> data = {
@@ -25,13 +25,13 @@ std::vector<std::vector<int>> data = {
 };
 ```
 
-[backup_data] -> сохраняет начальное состояние сетки судоку для отображения его рядом с решением.
+`backup_data` -> сохраняет начальное состояние сетки судоку для отображения его рядом с решением.
 ```c++
 const std::vector<std::vector<int>> backup_data = data;
 ```
 
 ## Функция проверки возможности продолжения
-[can_continue] -> функция проверяет возможность размещения числа в клетке `data[row][cell]`
+`can_continue` -> функция проверяет возможность размещения числа в клетке `data[row][cell]`
 
 ```c++
 bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, int iteration) {
@@ -47,7 +47,7 @@ bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, 
 ```
 
 ## Функция решения судоку
-[can_continue] -> рекурсивная функция, которая и производит процесс решения судоку.
+`process_solve` -> рекурсивная функция, которая и производит процесс решения судоку.
 * если мы достигли конца строки `row == 9`, значит решение найдено). Если же `cell == 9`, то переходим к следующей строке.
 * если клетка заполнена `data[row][cell] != 0`, то переходим к другой клетке.
 * если `can_continue` возвращает `true`, то вставляем найденное число в клетку и рекурсивно решаем дальше.
@@ -90,7 +90,7 @@ These screenshots show the sequence of events that will happen when this code is
 </p>
 
 ## Defining sudoku data
-[data] -> a vector representing a 9x9 sudoku grid. The zeros represent empty cells that need to be filled.
+`data` -> a vector representing a 9x9 sudoku grid. The zeros represent empty cells that need to be filled.
 
 ```c++
 std::vector<std::vector<int>> data = {
@@ -106,13 +106,13 @@ std::vector<std::vector<int>> data = {
 };
 ```
 
-[backup_data] -> saves the initial state of the sudoku grid to display it next to the solution.
+`backup_data` -> saves the initial state of the sudoku grid to display it next to the solution.
 ```c++
 const std::vector<std::vector<int>> backup_data = data;
 ```
 
 ## Function to check whether it is possible to continue
-[can_continue] -> function checks whether it is possible to place a number in the cell `data[row][cell]`
+`can_continue` -> function checks whether it is possible to place a number in the cell `data[row][cell]`
 
 ```c++
 bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, int iteration) {
@@ -128,7 +128,7 @@ bool can_continue(const std::vector<std::vector<int>>& data, int row, int cell, 
 ```
 
 ## Sudoku solving function
-[can_continue] -> recursive function that performs the process of solving sudoku.
+`process_solve` -> recursive function that performs the process of solving sudoku.
 * if we have reached the end of the line `row == 9`, then the solution has been found). If `cell == 9`, then we move on to the next line.
 * if the cell is filled with `data[row][cell] != 0`, then we move on to another cell.
 * if `can_continue` returns `true`, then we insert the found number into the cell and continue solving recursively.
